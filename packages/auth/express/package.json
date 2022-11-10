@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-auth-express.cjs.js",
+  "module": "dist/web3sdkio-auth-express.esm.js"
+}

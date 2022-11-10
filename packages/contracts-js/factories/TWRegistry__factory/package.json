@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-contracts-js-factories-TWRegistry__factory.cjs.js",
+  "module": "dist/web3sdkio-contracts-js-factories-TWRegistry__factory.esm.js"
+}

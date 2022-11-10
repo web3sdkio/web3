@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-auth-next-evm.cjs.js",
+  "module": "dist/web3sdkio-auth-next-evm.esm.js"
+}

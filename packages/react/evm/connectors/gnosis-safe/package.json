@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-react-evm-connectors-gnosis-safe.cjs.js",
+  "module": "dist/web3sdkio-react-evm-connectors-gnosis-safe.esm.js"
+}

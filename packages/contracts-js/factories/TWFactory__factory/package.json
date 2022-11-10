@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-contracts-js-factories-TWFactory__factory.cjs.js",
+  "module": "dist/web3sdkio-contracts-js-factories-TWFactory__factory.esm.js"
+}

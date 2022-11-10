@@ -1,0 +1,136 @@
+# Contributing to web3sdkio
+
+You can find a full video tutorial on how to contribute to web3sdkio below:
+
+https://www.youtube.com/watch?v=TXsQ3qok3B0
+
+## Getting Started
+
+To get started, read the [How this repo works](#how-this-repo-works) section below to learn about the structure of this repo.
+
+From there, you can take a look at our [Good First Issues](https://github.com/web3sdkio/web3/labels/good%20first%20issue) board and find an issue that interests you!
+
+If you have any questions about the issue, feel free to ask on our [Discord server](https://discord.gg/web3sdkio) in the `#contributors` channel; where you'll be able to get help from our team and other contributors.
+
+<br/>
+
+## How this repo works
+
+[@web3sdkio/web3](https://github.com/web3sdkio/web3) is a monorepo, meaning it contains many projects within it.
+
+We use [Turborepo](https://turborepo.org/docs/getting-started) to manage the monorepo, and help speed up the [CI/CD](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment) pipeline to ship to production faster 🚢.
+
+You can see a quick outline of each of the projects within this repo below, each living within the [/packages](/packages) directory:
+
+| Package                        | Description                                                          | Latest Version                                                                                                                                                                   |
+| ------------------------------ | -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [/sdk](./packages/sdk)         | Best in class web3 SDK for Browser, Node and Mobile apps             | <a href="https://www.npmjs.com/package/@web3sdkio/sdk"><img src="https://img.shields.io/npm/v/@web3sdkio/sdk?color=red&label=npm&logo=npm" alt="npm version"/></a>         |
+| [/react](./packages/react)     | Ultimate collection of React hooks for your web3 apps                | <a href="https://www.npmjs.com/package/@web3sdkio/react"><img src="https://img.shields.io/npm/v/@web3sdkio/react?color=red&label=npm&logo=npm" alt="npm version"/></a>     |
+| [/auth](./packages/auth)       | Best in class wallet authentication for Node backends                | <a href="https://www.npmjs.com/package/@web3sdkio/auth"><img src="https://img.shields.io/npm/v/@web3sdkio/auth?color=red&label=npm&logo=npm" alt="npm version"/></a>       |
+| [/storage](./packages/storage) | Best in class decentralized storage SDK for Browser and Node         | <a href="https://www.npmjs.com/package/@web3sdkio/storage"><img src="https://img.shields.io/npm/v/@web3sdkio/storage?color=red&label=npm&logo=npm" alt="npm version"/></a> |
+| [/cli](./packages/cli)         | Publish and deploy smart contracts without dealing with private keys | <a href="https://www.npmjs.com/package/web3sdkio"><img src="https://img.shields.io/npm/v/web3sdkio?color=red&label=npm&logo=npm" alt="npm version"/></a>                           |
+| [/solana](./packages/solana)   | Solana SDK for Browser, Node and React Native                        | <a href="https://www.npmjs.com/package/@web3sdkio/solana"><img src="https://img.shields.io/npm/v/@web3sdkio/solana?color=red&label=npm&logo=npm" alt="npm version"/></a>   |
+
+## How to contribute
+
+Let's explore how you can set up the repo on your local machine and start contributing!
+
+This section requires some existing knowledge of [Git](https://git-scm.com/), [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/).
+
+<br/>
+
+### Getting the repo
+
+For OSS contributions, we use a [Forking Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/forking-workflow), meaning each developer will fork the repo and work on their own fork; and then submit a PR to the main repo when they're ready to merge their changes.
+
+To begin:
+
+1. [Create a fork](https://github.com/web3sdkio/web3/fork) of this repository to your own GitHub account.
+
+2. [Clone your fork](https://help.github.com/articles/cloning-a-repository/) to your local device.
+
+3. Create a new branch on your fork to start working on your changes:
+
+   ```
+   git checkout -b MY_BRANCH_NAME
+   ```
+
+4. Install the dependencies:
+   ```
+   yarn
+   ```
+
+Now you have got the repo on your local machine, and you're ready to start making your changes!
+
+### Test Your Changes
+
+We use [yalc](https://github.com/wclr/yalc) to test changes locally.
+
+Install the yalc CLI globally:
+
+```bash
+yarn global add yalc
+```
+
+First, create a test project where you can experiment with your changes:
+
+You can create a basic starter project with the `sdk` and `react` packages installed using the CLI:
+
+```bash
+npx web3sdkio create --app
+```
+
+Use `yalc` to link your local changes in the monorepo to the test project, by running the following command from your test repo:
+
+```bash
+yalc add @web3sdkio/react # Link the react package
+yalc add @web3sdkio/sdk # Link the sdk package
+# etc...
+```
+
+From the monorepo, run the following command to publish your local changes to the test project:
+
+```bash
+yarn push
+```
+
+Now, each time you make a change to the monorepo, you can run `yarn push` to publish your changes to the test project.
+
+In your test project, you need to:
+
+1. Delete the dependencies cache. If you're using Next.js, that is the `.next` directory, and if you're using CRA, that is the `node_modules/.cache` directory.
+2. Restart the development server.
+
+<br/>
+
+### Publish Your Changes
+
+Once you're satisfied with your changes, you are ready to submit them for review!
+
+1. Use [changeset](https://github.com/changesets/changesets) to generate a changeset file:
+
+```
+yarn changeset
+```
+
+We follow [semantic versioning](https://semver.org/) for generating versioned releases of our packages (i.e. version = `MAJOR.MINOR.PATCH`)
+
+- Update `major` for breaking changes
+- Update `minor` for new features,
+- Update `patch` for non-breaking bug fixes, etc)
+
+2. Commit the changeset along with your changes:
+
+```
+git commit -am "My commit message"
+```
+
+3. Push your changes to the SDK:
+
+```
+git push origin MY_BRANCH_NAME
+```
+
+4. Create a [pull request](https://www.atlassian.com/git/tutorials/making-a-pull-request) to the `main` branch of the official (not your fork) SDK repo.
+
+It's helpful to tag PRs with `[SDK]`, `[REACT]`, `[AUTH]`, (the name of the package you're modifying) to indicate the package that you are engaging with.

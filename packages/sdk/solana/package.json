@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-sdk-solana.cjs.js",
+  "module": "dist/web3sdkio-sdk-solana.esm.js"
+}

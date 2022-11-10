@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-react-evm.cjs.js",
+  "module": "dist/web3sdkio-react-evm.esm.js"
+}
