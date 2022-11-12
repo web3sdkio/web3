@@ -46,7 +46,7 @@ import {
  * import { Web3sdkioSDK } from "@web3sdkio/sdk";
  *
  * const sdk = new Web3sdkioSDK("{{chainName}}");
- * const contract = sdk.getContract("{{contract_address}}", "vote");
+ * const contract = await sdk.getContract("{{contract_address}}", "vote");
  * ```
  *
  * @public

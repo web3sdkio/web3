@@ -1,12 +1,12 @@
 {
   "name": "@web3sdkio/contracts-js",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "main": "dist/web3sdkio-contracts-js.cjs.js",
   "module": "dist/web3sdkio-contracts-js.esm.js",
   "license": "Apache-2.0",
   "repository": "https://github.com/web3sdkio/web3/tree/main/packages/contracts-js",
   "dependencies": {
-    "@web3sdkio/contracts": "3.2.0-4"
+    "@web3sdkio/contracts": "^3.2.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.18.10",

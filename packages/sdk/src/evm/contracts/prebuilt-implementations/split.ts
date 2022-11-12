@@ -30,7 +30,7 @@ import { BigNumber, CallOverrides, Contract } from "ethers";
  * import { Web3sdkioSDK } from "@web3sdkio/sdk";
  *
  * const sdk = new Web3sdkioSDK("{{chainName}}");
- * const contract = sdk.getContract("{{contract_address}}", "split");
+ * const contract = await sdk.getContract("{{contract_address}}", "split");
  * ```
  *
  * @public

@@ -47,7 +47,7 @@ import { BigNumberish, CallOverrides, ethers } from "ethers";
  * import { Web3sdkioSDK } from "@web3sdkio/sdk";
  *
  * const sdk = new Web3sdkioSDK("{{chainName}}");
- * const contract = sdk.getContract("{{contract_address}}", "multiwrap");
+ * const contract = await sdk.getContract("{{contract_address}}", "multiwrap");
  * ```
  *
  * @beta
