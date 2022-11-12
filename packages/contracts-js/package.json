@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/web3sdkio/web3/tree/main/packages/contracts-js",
   "dependencies": {
-    "@web3sdkio/contracts": "^3.2.2"
+    "@web3sdkio/contracts": "^1.0.6"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.18.10",
