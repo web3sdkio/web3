@@ -267,7 +267,7 @@ export async function twCreate(pPath: string = "", options: any) {
 
   if (options.template === true) {
     console.error(
-      "Please provide an template name, otherwise remove the template option. Checkout some templates you can use here: https://github.com/web3sdkio-example/",
+      "Please provide an template name, otherwise remove the template option. Checkout some templates you can use here: https://github.com/web3sdkio-template/",
     );
     process.exit(1);
   }

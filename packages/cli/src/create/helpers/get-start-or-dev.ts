@@ -4,7 +4,7 @@ export const getStartOrDev = async (name: string) => {
   try {
     const data = (await got
       .get(
-        `https://raw.githubusercontent.com/web3sdkio-example/${name}/main/package.json`,
+        `https://raw.githubusercontent.com/web3sdkio-template/${name}/main/package.json`,
       )
       .json()) as any;
 

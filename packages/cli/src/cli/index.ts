@@ -42,7 +42,7 @@ $$$$$$\\   $$$$$$$\\  $$\\  $$$$$$\\   $$$$$$$ |$$\\  $$\\  $$\\  $$$$$$\\  $$$$
   program
     .command("create [projectPath]")
     .description(
-      "Create a web3 app from any of our official templates: https://github.com/web3sdkio-example/",
+      "Create a web3 app from any of our official templates: https://github.com/web3sdkio-template/",
     )
     .option("--app", `Create a web3 app.`)
     .option("--contract", `Create a web3 contract project`)
@@ -64,7 +64,7 @@ $$$$$$\\   $$$$$$$\\  $$\\  $$$$$$\\   $$$$$$$ |$$\\  $$\\  $$\\  $$$$$$\\  $$$$
     .option("--framework [name]", `The preferred framework.`)
     .option(
       "-t, --template [name]",
-      `A template to start your project from. You can use an template repository name from the official web3sdkio-example org.`,
+      `A template to start your project from. You can use an template repository name from the official web3sdkio-template org.`,
     )
     .action(async (path, options) => {
       await twCreate(path, options);

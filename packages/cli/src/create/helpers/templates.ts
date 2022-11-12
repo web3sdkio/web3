@@ -18,7 +18,7 @@ export async function isUrlOk(url: string): Promise<boolean> {
 
 export function hasTemplate(name: string): Promise<boolean> {
   return isUrlOk(
-    `https://api.github.com/repos/web3sdkio-example/${encodeURIComponent(name)}`,
+    `https://api.github.com/repos/web3sdkio-template/${encodeURIComponent(name)}`,
   );
 }
 
@@ -28,7 +28,7 @@ export function downloadAndExtractRepo(
 ): Promise<void> {
   return pipeline(
     got.stream(
-      `https://codeload.github.com/web3sdkio-example/${name}/tar.gz/main`,
+      `https://codeload.github.com/web3sdkio-template/${name}/tar.gz/main`,
     ),
     tar.extract(
       { cwd: root, strip: filePath ? filePath.split("/").length + 1 : 1 },
