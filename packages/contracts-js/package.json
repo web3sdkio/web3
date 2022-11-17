@@ -1,6 +1,6 @@
 {
   "name": "@web3sdkio/contracts-js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "dist/web3sdkio-contracts-js.cjs.js",
   "module": "dist/web3sdkio-contracts-js.esm.js",
   "license": "Apache-2.0",
