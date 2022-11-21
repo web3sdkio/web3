@@ -118,7 +118,7 @@ node my_script.js
 
 For frontend applications, head over to our [React Github repo](https://github.com/web3sdkio/web3/tree/main/packages/react) which shows you how to connect to a user's wallet like Metamask, and automatically instantiate the web3sdkio SDK for you.
 
-Easiest way to get started on the frontend is using one of our templates in the [web3sdkio examples repo](https://github.com/web3sdkio-example).
+Easiest way to get started on the frontend is using one of our templates in the [web3sdkio examples repo](https://github.com/web3sdkio-template).
 
 ## API Reference & code examples
 

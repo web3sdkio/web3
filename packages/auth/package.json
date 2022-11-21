@@ -1,6 +1,6 @@
 {
   "name": "@web3sdkio/auth",
-  "version": "1.0.0",
+  "version": "2.0.30",
   "exports": {
     "./next": {
       "module": "./next/dist/web3sdkio-auth-next.esm.js",
@@ -61,12 +61,12 @@
     "@microsoft/api-extractor": "^7.29.2",
     "@microsoft/tsdoc": "^0.14.1",
     "@preconstruct/cli": "^2.2.1",
+    "@web3sdkio/sdk": "*",
     "@types/cookie": "^0.5.1",
     "@types/cookie-parser": "^1.4.3",
     "@types/express": "^4.17.13",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
-    "@web3sdkio/sdk": "*",
     "eslint": "^8.21.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.26.0",

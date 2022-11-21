@@ -1,5 +1,12 @@
 # web3sdkio
 
+## 0.8.16
+
+### Patch Changes
+
+- Updated dependencies [[`7cb8e59`](https://github.com/web3sdkio/web3/commit/7cb8e59be48dc923316eb36ab43a1bef7364f6b1), [`0ed77d2`](https://github.com/web3sdkio/web3/commit/0ed77d2c9e7526444ef660aab82a950865234aa6), [`04a47e8`](https://github.com/web3sdkio/web3/commit/04a47e8971d28da2532ebd9db824eeb459c17bd4)]:
+  - @web3sdkio/sdk@3.6.0
+
 ## 0.8.15
 
 ### Patch Changes

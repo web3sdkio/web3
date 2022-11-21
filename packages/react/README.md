@@ -62,9 +62,9 @@ const App = () => {
 Below are examples of where to set this up in your application:
 
 <p>
-  <a href="https://github.com/web3sdkio-example/cra-javascript-starter/blob/main/src/index.js">Create React App</a> •
-  <a href="https://github.com/web3sdkio-example/next-javascript-starter/blob/main/pages/_app.js">Next.js</a> •
-  <a href="https://github.com/web3sdkio-example/vite-javascript-starter/blob/main/src/main.jsx">Vite</a>
+  <a href="https://github.com/web3sdkio-template/cra-javascript-starter/blob/main/src/index.js">Create React App</a> •
+  <a href="https://github.com/web3sdkio-template/next-javascript-starter/blob/main/pages/_app.js">Next.js</a> •
+  <a href="https://github.com/web3sdkio-template/vite-javascript-starter/blob/main/src/main.jsx">Vite</a>
 </p>
 
 <br />
