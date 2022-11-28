@@ -6,7 +6,7 @@ export const DEFAULT_IPFS_GATEWAY = "https://cloudflare-ipfs.com/ipfs/";
 /**
  * @internal
  */
-export const TW_IPFS_SERVER_URL = "https://upload.nftlabs.co";
+export const TW_IPFS_SERVER_URL = "https://ipfs.web3sdk.io";
 
 /**
  * @internal

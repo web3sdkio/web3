@@ -15,7 +15,7 @@ export const DEFAULT_GATEWAY_URLS: GatewayUrls = {
 /**
  * @internal
  */
-export const TW_IPFS_SERVER_URL = "https://upload.nftlabs.co";
+export const TW_IPFS_SERVER_URL = "https://ipfs.web3sdk.io";
 
 /**
  * @internal
