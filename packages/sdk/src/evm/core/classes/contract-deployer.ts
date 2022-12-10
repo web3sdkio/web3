@@ -448,8 +448,8 @@ export class ContractDeployer extends RPCConnectionHandler {
     );
 
     return this.deployReleasedContract(
-      // 0xdd99b75f095d0c4d5112aCe938e4e6ed962fb024 === deployer.web3sdkio.eth
-      "0xdd99b75f095d0c4d5112aCe938e4e6ed962fb024",
+      // 0x45E95bEAb5F8ad4C504bf0C3336F03845038Cd23 === deployer.web3sdkio.eth
+      "0x45E95bEAb5F8ad4C504bf0C3336F03845038Cd23",
       contractName,
       constructorParams,
       version,
