@@ -479,7 +479,7 @@ export class ContractDeployer extends RPCConnectionHandler {
     constructorParams: any[],
     version = "latest",
   ): Promise<string> {
-    const release = await new Web3sdkioSDK("polygon")
+    const release = await new Web3sdkioSDK(process.env.NEXT_PUBLIC_RELEASE_NETWORK || "polygon")
       .getPublisher()
       .getVersion(releaserAddress, contractName, version);
     if (!release) {

@@ -52,12 +52,12 @@ export const CONTRACT_ADDRESSES: Record<
     twBYOCRegistry: "0x0000000000000000000000000000000000000000",
   },
   [ChainId.Mumbai]: {
-    openzeppelinForwarder: OZ_DEFENDER_FORWARDER_ADDRESS,
-    openzeppelinForwarderEOA: "0x0000000000000000000000000000000000000000",
-    biconomyForwarder: "0x0000000000000000000000000000000000000000",
-    twFactory: TWFactory_address,
-    twRegistry: TWRegistry_address,
-    twBYOCRegistry: "0x0000000000000000000000000000000000000000",
+    openzeppelinForwarder: "0x83b69703543B7240b2e8218f9Ca21255e007AD49",
+    openzeppelinForwarderEOA: "0x94D160bEe4581885895910B899Ec606f1aC20FBD",
+    biconomyForwarder: "0x07Fd3DAdf1f81BfA0ab0841c33e44789E78335F0",
+    twFactory: "0xA3033c3d137b58edC315362c5B1858613b88c61C",
+    twRegistry: "0x535Dc6e14C23623145e396271cc45858CCE0F21c",
+    twBYOCRegistry: "0x2F7f4Ac01119F8F99B94F0927EfA27D7818A074b",
   },
   [ChainId.Avalanche]: {
     openzeppelinForwarder: OZ_DEFENDER_FORWARDER_ADDRESS,
