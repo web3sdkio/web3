@@ -6,7 +6,7 @@
 <h1 align="center">web3sdkio CLI</h1>
 <p align="center">
 <a href="https://www.npmjs.com/package/@web3sdkio/cli"><img src="https://img.shields.io/npm/v/@web3sdkio/cli?color=red&logo=npm" alt="npm version"/></a>
-<a href="https://discord.gg/web3sdkio"><img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/></a>
+<a href="https://discord.gg/n33UhsfUKB"><img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/></a>
 
 </p>
 <p align="center"><strong>Publish and deploy smart contracts without dealing with private keys</strong></p>
@@ -62,7 +62,7 @@ Deploying released contracts give deployers access to automatic SDKs to integrat
 npx web3sdkio@latest detect
 ```
 
-As you're developing your contracts, you may want to implement [Extensions](https://portal.web3sdk.io/extensions) to unlock functionality on the SDKs (ie. nft minting with automatic upload to IPFS) and the dashboard (ie. generated UI to manage permissions). This command will show what extensions were detected on your contract, unlocking the corresponding functionality on the SDKs and dashboard.
+As you're developing your contracts, you may want to implement [Extensions](https://docs.web3sdk.io/extensions) to unlock functionality on the SDKs (ie. nft minting with automatic upload to IPFS) and the dashboard (ie. generated UI to manage permissions). This command will show what extensions were detected on your contract, unlocking the corresponding functionality on the SDKs and dashboard.
 
 ---
 

@@ -250,7 +250,7 @@ export class AuctionHasNotEndedError extends Error {
 export class ExtensionNotImplementedError extends Error {
   constructor(feature: Feature) {
     super(
-      `This functionality is not available because the contract does not implement the '${feature.docLinks.contracts}' Extension. Learn how to unlock this functionality at https://portal.web3sdk.io/extensions `,
+      `This functionality is not available because the contract does not implement the '${feature.docLinks.contracts}' Extension. Learn how to unlock this functionality at https://docs.web3sdk.io/extensions `,
     );
   }
 }
@@ -321,7 +321,7 @@ export class TransactionError extends Error {
     }
     builtErrorMsg += "\n\n";
     builtErrorMsg +=
-      "Need help with this error? Join our community: https://discord.gg/web3sdkio";
+      "Need help with this error? Join our community: https://discord.gg/n33UhsfUKB";
     builtErrorMsg += "\n\n\n\n";
     builtErrorMsg += "| Raw error |";
     builtErrorMsg += "\n\n";

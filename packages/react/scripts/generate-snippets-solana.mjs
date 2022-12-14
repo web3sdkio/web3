@@ -70,7 +70,7 @@ function parseExampleTag(docComment) {
   return examples;
 }
 
-const baseDocUrl = "https://portal.web3sdk.io/react/solana/react.";
+const baseDocUrl = "https://docs.web3sdk.io/react/solana/react.";
 
 const extractReferenceLink = (m, kind, contractName) => {
   if (kind === "Property") {

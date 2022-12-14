@@ -7,7 +7,7 @@
 <p align="center">
 <a href="https://www.npmjs.com/package/@web3sdkio/react"><img src="https://img.shields.io/npm/v/@web3sdkio/react?color=red&label=npm&logo=npm" alt="npm version"/></a>
 <a href="https://github.com/web3sdkio/web3/actions/workflows/CI.yml"><img alt="Build Status" src="https://github.com/web3sdkio/web3/actions/workflows/CI.yml/badge.svg"/></a>
-<a href="https://discord.gg/web3sdkio"><img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/></a>
+<a href="https://discord.gg/n33UhsfUKB"><img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/></a>
 
 </p>
 <p align="center"><strong>Ultimate collection of React hooks for your web3 apps</strong></p>
@@ -71,7 +71,7 @@ Below are examples of where to set this up in your application:
 
 ### Connect to a User's Wallet
 
-Now the provider is set up, we can use all of the hooks and UI components available in the SDK, such as the [ConnectWallet](https://portal.web3sdk.io/ui-components/connectwalletbutton) component.
+Now the provider is set up, we can use all of the hooks and UI components available in the SDK, such as the [ConnectWallet](https://docs.web3sdk.io/ui-components/connectwalletbutton) component.
 
 Once the user has connected their wallet, all the calls we make to interact with contracts using the SDK will be on behalf of the user.
 
@@ -96,7 +96,7 @@ We can then get the connected address using the `useAddress` hook anywhere in th
 
 ### Interact With Contracts
 
-Connect to your smart contract using the [`useContract`](https://portal.web3sdk.io/sdk/interacting-with-contracts/custom-contracts/getting-a-contract#connect-to-a-contract)
+Connect to your smart contract using the [`useContract`](https://docs.web3sdk.io/sdk/interacting-with-contracts/custom-contracts/getting-a-contract#connect-to-a-contract)
 hook like so:
 
 ```jsx title="pages/index.jsx"
@@ -109,7 +109,7 @@ export default function Home() {
 }
 ```
 
-You can then use [`useContractRead`](https://portal.web3sdk.io/sdk/interacting-with-contracts/custom-contracts/using-contracts) and [`useContractWrite`](https://portal.web3sdk.io/sdk/interacting-with-contracts/custom-contracts/using-contracts) to read data and write transactions to the contract.
+You can then use [`useContractRead`](https://docs.web3sdk.io/sdk/interacting-with-contracts/custom-contracts/using-contracts) and [`useContractWrite`](https://docs.web3sdk.io/sdk/interacting-with-contracts/custom-contracts/using-contracts) to read data and write transactions to the contract.
 
 You pass the `contract` object returned from `useContract` to these hooks as the first parameter and the name of the function (or view/mapping, etc.) on your smart contract as the second parameter. If your function requires parameters, you can pass them as additional arguments.
 
@@ -139,11 +139,11 @@ export default function Home() {
 
 ### Using Extensions
 
-Each [extension](https://portal.web3sdk.io/extensions) you implement in your smart contract unlocks new functionality in the SDK.
+Each [extension](https://docs.web3sdk.io/extensions) you implement in your smart contract unlocks new functionality in the SDK.
 
 These hooks make it easy to interact with your smart contracts by implementing the complex logic for you under the hood.
 
-For example, if your smart contract implements [ERC721Supply](https://portal.web3sdk.io/contractkit/interfaces/erc721supply#unlocked-features), you unlock the ability to [view all NFTs](https://portal.web3sdk.io/sdk/interacting-with-contracts/erc721supply#get-all-minted-nfts) on that contract using the SDK; which fetches all of your NFT metadata and the current owner of each NFT in parallel. In the React SDK, that is available using `useNFTs`:
+For example, if your smart contract implements [ERC721Supply](https://docs.web3sdk.io/contractkit/interfaces/erc721supply#unlocked-features), you unlock the ability to [view all NFTs](https://docs.web3sdk.io/sdk/interacting-with-contracts/erc721supply#get-all-minted-nfts) on that contract using the SDK; which fetches all of your NFT metadata and the current owner of each NFT in parallel. In the React SDK, that is available using `useNFTs`:
 
 ```jsx
 import { useContract, useNFTs } from "@web3sdkio/react";
@@ -154,7 +154,7 @@ export default function Home() {
 }
 ```
 
-If we want to mint an NFT and our contract implements [ERC721Mintable](https://portal.web3sdk.io/contractkit/interfaces/erc721mintable#unlocked-features), we can use the [`useMintNFT`](https://portal.web3sdk.io/sdk/interacting-with-contracts/erc721mintable) hook to mint an NFT from the connected wallet; handling all of the logic of uploading and pinning the metadata to IPFS for us behind the scenes.
+If we want to mint an NFT and our contract implements [ERC721Mintable](https://docs.web3sdk.io/contractkit/interfaces/erc721mintable#unlocked-features), we can use the [`useMintNFT`](https://docs.web3sdk.io/sdk/interacting-with-contracts/erc721mintable) hook to mint an NFT from the connected wallet; handling all of the logic of uploading and pinning the metadata to IPFS for us behind the scenes.
 
 ```jsx
 import { useContract, useNFTs, useMintNFT } from "@web3sdkio/react";
@@ -172,7 +172,7 @@ export default function Home() {
 
 The SDK provides many UI components to help you build your application.
 
-For example, we can render each of the NFTs using the [`NFT Media Renderer`](https://portal.web3sdk.io/ui-components/nft-renderer)
+For example, we can render each of the NFTs using the [`NFT Media Renderer`](https://docs.web3sdk.io/ui-components/nft-renderer)
 component, making use of the loading state from `useNFTs`:
 
 ```jsx title="pages/index.jsx"
@@ -203,7 +203,7 @@ export default function Home() {
 }
 ```
 
-The [`Web3Button`](https://portal.web3sdk.io/ui-components/web3button) component ensures the user has connected their wallet and is currently configured to the same network as your smart contract before calling the function. It also has access to the `contract` directly, allowing you to perform any action on your smart contract when the button is clicked.
+The [`Web3Button`](https://docs.web3sdk.io/ui-components/web3button) component ensures the user has connected their wallet and is currently configured to the same network as your smart contract before calling the function. It also has access to the `contract` directly, allowing you to perform any action on your smart contract when the button is clicked.
 
 For example, we can mint an NFT like so:
 

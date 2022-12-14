@@ -80,7 +80,7 @@ export function generateSnippets(ecosystem) {
   }
 
   const path = ecosystem === "solana" ? "solana-sdk" : "typescript";
-  const baseDocUrl = `https://portal.web3sdk.io/${path}/sdk.`;
+  const baseDocUrl = `https://docs.web3sdk.io/${path}/sdk.`;
 
   const extractReferenceLink = (m, kind, contractName) => {
     if (kind === "Property") {

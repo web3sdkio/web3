@@ -176,7 +176,7 @@ function parseExampleTag(docComment) {
   return examples;
 }
 
-const baseDocUrl = "https://portal.web3sdk.io/react/react.";
+const baseDocUrl = "https://docs.web3sdk.io/react/react.";
 
 const extractReferenceLink = (m, kind, contractName) => {
   if (kind === "Property") {

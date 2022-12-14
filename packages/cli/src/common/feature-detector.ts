@@ -72,13 +72,13 @@ export async function detectExtensions(options: any) {
       const enabledFeatures: Feature[] = features.enabledFeatures.map(
         (feature) => ({
           name: feature.name,
-          reference: `https://portal.web3sdk.io/extensions/${feature.name.toLowerCase()}`,
+          reference: `https://docs.web3sdk.io/extensions/${feature.name.toLowerCase()}`,
         }),
       );
       const suggestedFeatures: Feature[] = features.suggestedFeatures.map(
         (feature) => ({
           name: feature.name,
-          reference: `https://portal.web3sdk.io/extensions/${feature.name.toLowerCase()}`,
+          reference: `https://docs.web3sdk.io/extensions/${feature.name.toLowerCase()}`,
         }),
       );
 

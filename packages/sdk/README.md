@@ -7,7 +7,7 @@
 <p align="center">
 <a href="https://www.npmjs.com/package/@web3sdkio/sdk"><img src="https://img.shields.io/npm/v/@web3sdkio/sdk?color=red&label=npm&logo=npm" alt="npm version"/></a>
 <a href="https://github.com/web3sdkio/web3/actions/workflows/CI.yml"><img alt="Build Status" src="https://github.com/web3sdkio/web3/actions/workflows/CI.yml/badge.svg"/></a>
-<a href="https://discord.gg/web3sdkio"><img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/></a>
+<a href="https://discord.gg/n33UhsfUKB"><img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/></a>
 
 </p>
 <p align="center"><strong>Best in class Web3 SDK for Browser, Node and Mobile apps</strong></p>
@@ -32,8 +32,8 @@ yarn add @web3sdkio/sdk ethers
 ### 1. Deploy & customize your contracts
 
 - Using your [web3sdkio dashboard](https://web3sdk.io/dashboard) (recommended)
-- Using the [SDK directly](https://portal.web3sdk.io/typescript/sdk.contractdeployer)
-- Using the [web3sdkio CLI](https://portal.web3sdk.io/deploy)
+- Using the [SDK directly](https://docs.web3sdk.io/typescript/sdk.contractdeployer)
+- Using the [web3sdkio CLI](https://docs.web3sdk.io/deploy)
 
 ### 2. Reading data from your contracts
 
@@ -83,7 +83,7 @@ Here's how to provide your own private key to the SDK to perform transactions wi
 // my_script.js
 import { Web3sdkioSDK } from "@web3sdkio/sdk";
 
-// Learn more about securely accessing your private key: https://portal.web3sdk.io/web3-sdk/set-up-the-sdk/securing-your-private-key
+// Learn more about securely accessing your private key: https://docs.web3sdk.io/web3-sdk/set-up-the-sdk/securing-your-private-key
 const privateKey = "<your-private-key-here>";
 // instantiate the SDK based on your private key, with the desired chain to connect to
 const sdk = Web3sdkioSDK.fromPrivateKey(privateKey, "polygon");
@@ -122,7 +122,7 @@ Easiest way to get started on the frontend is using one of our templates in the 
 
 ## API Reference & code examples
 
-- [Step by step guides and recipes](https://portal.web3sdk.io)
+- [Step by step guides and recipes](https://docs.web3sdk.io)
 - [Full Api Reference and code examples](https://docs.web3sdk.io/typescript)
 
 ## Build from source
@@ -150,5 +150,5 @@ make test
 
 ## Get in touch
 
-- [Discord](https://discord.gg/web3sdkio)
+- [Discord](https://discord.gg/n33UhsfUKB)
 - [Twitter](https://twitter.com/web3sdkio_/)

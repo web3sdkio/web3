@@ -6,7 +6,7 @@ import React, {
 } from "react";
 
 /**
- * The configuration to use the react SDK with an [auth](https://portal.web3sdk.io/auth) server.
+ * The configuration to use the react SDK with an [auth](https://docs.web3sdk.io/auth) server.
  *
  * @beta
  */

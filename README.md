@@ -11,7 +11,7 @@
     <a href="https://github.com/web3sdkio/web3/actions/workflows/CI.yml">
         <img alt="Build Status" src="https://github.com/web3sdkio/web3/actions/workflows/CI.yml/badge.svg"/>
     </a>
-    <a href="https://discord.gg/web3sdkio">
+    <a href="https://discord.gg/n33UhsfUKB">
         <img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/>
     </a>
 </p>
@@ -31,7 +31,7 @@
 
 ## Documentation
 
-Visit [https://portal.web3sdk.io/](https://portal.web3sdk.io/) to view the full documentation.
+Visit [https://docs.web3sdk.io/](https://docs.web3sdk.io/) to view the full documentation.
 
 <br />
 
@@ -43,7 +43,7 @@ We welcome contributions from all developers, regardless of experience level. If
 
 ## Community
 
-The best place to discuss your ideas, ask questions, and troubleshoot issues is our [Discord server](https://discord.gg/web3sdkio).
+The best place to discuss your ideas, ask questions, and troubleshoot issues is our [Discord server](https://discord.gg/n33UhsfUKB).
 
 <br/>
 

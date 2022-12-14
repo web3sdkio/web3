@@ -5,7 +5,7 @@
 </p>
 <h1 align="center">web3sdkio Solana SDK</h1>
 <p align="center">
-<a href="https://discord.gg/web3sdkio"><img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/></a>
+<a href="https://discord.gg/n33UhsfUKB"><img alt="Join our Discord!" src="https://img.shields.io/discord/834227967404146718.svg?color=7289da&label=discord&logo=discord&style=flat"/></a>
 
 </p>
 <p align="center"><strong>web3sdkio's Solana SDK for Browser, Node and React Native</strong></p>
@@ -64,6 +64,6 @@ const nft = await program.get(mintAddress);
 
 You can learn more about web3sdkio and the Solana SDK with the following resources:
 
-- [Solana Docs](https://portal.web3sdk.io/solana)
+- [Solana Docs](https://docs.web3sdk.io/solana)
 - [Web3sdkio Twitter](https://twitter.com/web3sdkio_)
 - [Web3sdkio Discord](https://discord.com/invite/web3sdkio)
