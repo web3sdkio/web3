@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-wallets-connectors-magic.cjs.js",
+  "module": "dist/web3sdkio-wallets-connectors-magic.esm.js"
+}

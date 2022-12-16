@@ -1,5 +1,13 @@
 # @web3sdkio/react
 
+## 3.6.8
+
+### Patch Changes
+
+- [#454](https://github.com/web3sdkio/web3/pull/454) [`c673e39`](https://github.com/web3sdkio/web3/commit/c673e39f23ef082097d73d62910580e8fad400a0) Thanks [@jnsdls](https://github.com/jnsdls)! - upgraded dependencies
+
+- [#422](https://github.com/web3sdkio/web3/pull/422) [`08d04fe`](https://github.com/web3sdkio/web3/commit/08d04fe4dc74ba0d12625d7d4004c23f7dc330a2) Thanks [@yehia67](https://github.com/yehia67)! - Add `btnTitle` prop to the `ConnectWallet` component. Now you can set customized string or child component to the connect button.
+
 ## 3.6.7
 
 ### Patch Changes

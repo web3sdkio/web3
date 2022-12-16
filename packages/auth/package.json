@@ -1,6 +1,6 @@
 {
   "name": "@web3sdkio/auth",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "exports": {
     "./next": {
       "module": "./next/dist/web3sdkio-auth-next.esm.js",
