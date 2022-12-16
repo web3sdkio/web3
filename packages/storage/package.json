@@ -1,6 +1,6 @@
 {
   "name": "@web3sdkio/storage",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/web3sdkio-storage.cjs.js",
   "module": "dist/web3sdkio-storage.esm.js",
   "exports": {
