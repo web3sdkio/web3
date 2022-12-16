@@ -1,5 +1,88 @@
 # web3sdkio
 
+## 0.9.6
+
+### Patch Changes
+
+- [#441](https://github.com/web3sdkio/web3/pull/441) [`64f24f1`](https://github.com/web3sdkio/web3/commit/64f24f1bb167c3d0cb3beca51fd300eaec21cc27) Thanks [@adam-maj](https://github.com/adam-maj)! - CLI autoupdates on run
+
+- [#447](https://github.com/web3sdkio/web3/pull/447) [`e7740a5`](https://github.com/web3sdkio/web3/commit/e7740a59db022a3396194ac66cd195d8ae754d57) Thanks [@adam-maj](https://github.com/adam-maj)! - Detect whether forge is installed
+
+- Updated dependencies [[`3731459`](https://github.com/web3sdkio/web3/commit/3731459d33f1ded7ebb69124809449b901b3ad3d), [`cac6c30`](https://github.com/web3sdkio/web3/commit/cac6c30bca5e17df81d746ef81316af47d5e252e), [`7a37e56`](https://github.com/web3sdkio/web3/commit/7a37e564fd5d5a9df84c8da44ecaf6c42f67a0e2)]:
+  - @web3sdkio/sdk@3.6.7
+
+## 0.9.5
+
+### Patch Changes
+
+- Updated dependencies [[`8c6cdaa`](https://github.com/web3sdkio/web3/commit/8c6cdaa2887fb2cc40d3ee6991233d195d103805)]:
+  - @web3sdkio/sdk@3.6.6
+
+## 0.9.4
+
+### Patch Changes
+
+- [#444](https://github.com/web3sdkio/web3/pull/444) [`94f49b1`](https://github.com/web3sdkio/web3/commit/94f49b1294bc0208171b16ed413cbb44644af017) Thanks [@adam-maj](https://github.com/adam-maj)! - Add changeset
+
+## 0.9.3
+
+### Patch Changes
+
+- Updated dependencies [[`efc56fa`](https://github.com/web3sdkio/web3/commit/efc56fa5802490ac8ef50037658d046afd89e9a1)]:
+  - @web3sdkio/sdk@3.6.5
+
+## 0.9.2
+
+### Patch Changes
+
+- [#430](https://github.com/web3sdkio/web3/pull/430) [`e684d7e`](https://github.com/web3sdkio/web3/commit/e684d7e1ca16f633bce8698529d16bf60c264aa4) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Fix uploading contracts with special characters in the comments
+
+- [#435](https://github.com/web3sdkio/web3/pull/435) [`bef97f7`](https://github.com/web3sdkio/web3/commit/bef97f72f4860596b7b70b05e67fcadf2c9a012e) Thanks [@adam-maj](https://github.com/adam-maj)! - Make solc default backup compilation
+
+- [#432](https://github.com/web3sdkio/web3/pull/432) [`3e87dd3`](https://github.com/web3sdkio/web3/commit/3e87dd3ccb04a2b73437357c939a251e83b783b2) Thanks [@adam-maj](https://github.com/adam-maj)! - Display file name on duplicate contract names
+
+- [#431](https://github.com/web3sdkio/web3/pull/431) [`c42545a`](https://github.com/web3sdkio/web3/commit/c42545a64725492136025fa1dcdb4d46ba674a30) Thanks [@adam-maj](https://github.com/adam-maj)! - Add changeset
+
+- [#428](https://github.com/web3sdkio/web3/pull/428) [`6e20d1f`](https://github.com/web3sdkio/web3/commit/6e20d1f21a622f102e94b956f700d0871c0dc779) Thanks [@adam-maj](https://github.com/adam-maj)! - Update CLI to enable create contract inside contracts project
+
+- Updated dependencies [[`f451da6`](https://github.com/web3sdkio/web3/commit/f451da6395689a5f89800ee63f34b6175b61f703), [`af3acc6`](https://github.com/web3sdkio/web3/commit/af3acc6b10751b840e56aef6400da5eea6040df2), [`1bfb91d`](https://github.com/web3sdkio/web3/commit/1bfb91dbf3a39160c987a425813ac5dbb84703ad), [`ee47840`](https://github.com/web3sdkio/web3/commit/ee478407673b0416e0c1cfe2be11bd6963395348), [`def4251`](https://github.com/web3sdkio/web3/commit/def42511ff5a20d83f9094164dafb87e412571b5), [`034a257`](https://github.com/web3sdkio/web3/commit/034a257442314c67729f7bafcbe3740cff33fa32), [`eca4776`](https://github.com/web3sdkio/web3/commit/eca47763cd89cc3b7aa57b542971837987540b55), [`639e535`](https://github.com/web3sdkio/web3/commit/639e535ed55280ad9d081001aab3f5af72bb3e45)]:
+  - @web3sdkio/sdk@3.6.4
+
+## 0.9.1
+
+### Patch Changes
+
+- [#415](https://github.com/web3sdkio/web3/pull/415) [`48d91e4`](https://github.com/web3sdkio/web3/commit/48d91e4431a3740d0f98f730ed5abf5b287f92c1) Thanks [@nachoiacovino](https://github.com/nachoiacovino)! - Fix mappings for prebuilts redirect on deploy
+
+## 0.9.0
+
+### Minor Changes
+
+- [#403](https://github.com/web3sdkio/web3/pull/403) [`27996cb`](https://github.com/web3sdkio/web3/commit/27996cb4bc6f054f45b0a66b0a3aca732e0ef610) Thanks [@avneesh0612](https://github.com/avneesh0612)! - Add CLI Support for solana with --solana flag on create command
+
+- [#283](https://github.com/web3sdkio/web3/pull/283) [`2eaa67a`](https://github.com/web3sdkio/web3/commit/2eaa67acbe21464e7715d0b696afdc024460a44d) Thanks [@adam-maj](https://github.com/adam-maj)! - add capability to deploy apps
+
+### Patch Changes
+
+- [#413](https://github.com/web3sdkio/web3/pull/413) [`1b0bf99`](https://github.com/web3sdkio/web3/commit/1b0bf99da796df88ff307dd004cdaf239fb2b1ba) Thanks [@furqanrydhan](https://github.com/furqanrydhan)! - small interface tweaks
+
+- Updated dependencies [[`48797c7`](https://github.com/web3sdkio/web3/commit/48797c7cf0695965e33eb6bf602be4652f7085a8), [`83dcaf7`](https://github.com/web3sdkio/web3/commit/83dcaf70584af8c5cdf0427f9fc1ba82d89f0887), [`f03be39`](https://github.com/web3sdkio/web3/commit/f03be398e0d7b75c9c5b4fb643f35903e89a17e7), [`2eaa67a`](https://github.com/web3sdkio/web3/commit/2eaa67acbe21464e7715d0b696afdc024460a44d), [`47f8945`](https://github.com/web3sdkio/web3/commit/47f8945325447874b1ace0359919c1d54fd55436)]:
+  - @web3sdkio/sdk@3.6.3
+
+## 0.8.18
+
+### Patch Changes
+
+- Updated dependencies [[`ccb7db4`](https://github.com/web3sdkio/web3/commit/ccb7db48739b8dddcb2c032b3b6e3e5200485715), [`9151aa7`](https://github.com/web3sdkio/web3/commit/9151aa7dc80754a7aa4fd3f6ce0207bccbb6451f), [`5a01c53`](https://github.com/web3sdkio/web3/commit/5a01c537e30bd7ef562aad1012413990de6faedf)]:
+  - @web3sdkio/sdk@3.6.2
+
+## 0.8.17
+
+### Patch Changes
+
+- Updated dependencies [[`15514f1`](https://github.com/web3sdkio/web3/commit/15514f190a844d809ae5b1edb580aab46a682485), [`7c0744a`](https://github.com/web3sdkio/web3/commit/7c0744a006e78987ad8b271b2c64f4bac7759510), [`f8bceec`](https://github.com/web3sdkio/web3/commit/f8bceec10c60b30dc3d6f45926e2a9e018202578), [`887af24`](https://github.com/web3sdkio/web3/commit/887af24450e316c2ea390cd49c0563cebe793c0f), [`96bd92e`](https://github.com/web3sdkio/web3/commit/96bd92e724ec7d880d23348071b26ab8c21dd868)]:
+  - @web3sdkio/sdk@3.6.1
+
 ## 0.8.16
 
 ### Patch Changes

@@ -1,5 +1,43 @@
 # @web3sdkio/react
 
+## 3.6.7
+
+### Patch Changes
+
+- [#448](https://github.com/web3sdkio/web3/pull/448) [`7a37e56`](https://github.com/web3sdkio/web3/commit/7a37e564fd5d5a9df84c8da44ecaf6c42f67a0e2) Thanks [@jnsdls](https://github.com/jnsdls)! - [EVM] - allow `useContract` to fail faster to enable the import case
+
+## 3.6.6
+
+### Patch Changes
+
+- [#443](https://github.com/web3sdkio/web3/pull/443) [`8c6cdaa`](https://github.com/web3sdkio/web3/commit/8c6cdaa2887fb2cc40d3ee6991233d195d103805) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Fix magic link connector not connecting to the right chain
+
+## 3.6.5
+
+## 3.6.4
+
+### Patch Changes
+
+- [#425](https://github.com/web3sdkio/web3/pull/425) [`f545a67`](https://github.com/web3sdkio/web3/commit/f545a67e9fb597d27bb39ca515d24d306fbb121a) Thanks [@adam-maj](https://github.com/adam-maj)! - Add sameSite none and include credentials
+
+- [#420](https://github.com/web3sdkio/web3/pull/420) [`639e535`](https://github.com/web3sdkio/web3/commit/639e535ed55280ad9d081001aab3f5af72bb3e45) Thanks [@jnsdls](https://github.com/jnsdls)! - update deps
+
+## 3.6.3
+
+## 3.6.2
+
+### Patch Changes
+
+- [#405](https://github.com/web3sdkio/web3/pull/405) [`ccb7db4`](https://github.com/web3sdkio/web3/commit/ccb7db48739b8dddcb2c032b3b6e3e5200485715) Thanks [@nachoiacovino](https://github.com/nachoiacovino)! - Add updateAll param to creators and royalty update hooks for Solana
+
+## 3.6.1
+
+### Patch Changes
+
+- [#392](https://github.com/web3sdkio/web3/pull/392) [`846022e`](https://github.com/web3sdkio/web3/commit/846022e2cfb12b846aae029b85899fb72fd2c9ad) Thanks [@nachoiacovino](https://github.com/nachoiacovino)! - Fix unlimited price for useActiveClaimConditionForWallet
+
+- [#388](https://github.com/web3sdkio/web3/pull/388) [`7c0744a`](https://github.com/web3sdkio/web3/commit/7c0744a006e78987ad8b271b2c64f4bac7759510) Thanks [@adam-maj](https://github.com/adam-maj)! - Add support for total supply and pagination on get all
+
 ## 3.6.0
 
 ### Patch Changes

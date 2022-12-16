@@ -1,0 +1,5 @@
+{
+  "extends": "@web3sdkio/tsconfig/base.json",
+  "include": ["src", "types"],
+  "exclude": ["dist", "build", "node_modules"]
+}

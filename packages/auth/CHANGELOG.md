@@ -1,5 +1,27 @@
 # @web3sdkio/auth
 
+## 2.0.37
+
+## 2.0.36
+
+## 2.0.35
+
+## 2.0.34
+
+### Patch Changes
+
+- [#425](https://github.com/web3sdkio/web3/pull/425) [`f545a67`](https://github.com/web3sdkio/web3/commit/f545a67e9fb597d27bb39ca515d24d306fbb121a) Thanks [@adam-maj](https://github.com/adam-maj)! - Add sameSite none and include credentials
+
+## 2.0.33
+
+## 2.0.32
+
+## 2.0.31
+
+### Patch Changes
+
+- [#397](https://github.com/web3sdkio/web3/pull/397) [`72589ec`](https://github.com/web3sdkio/web3/commit/72589ec234d86939b67b0ca8b3b789f2e9c54cc2) Thanks [@adam-maj](https://github.com/adam-maj)! - Call user callback in getUser
+
 ## 2.0.30
 
 ## 2.0.29

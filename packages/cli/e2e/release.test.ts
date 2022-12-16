@@ -15,7 +15,7 @@ describe("npx web3sdkio release", () => {
       `${path}/BasicContract.sol`,
     );
 
-    const { waitForText, waitForFinish, getExitCode, writeText, getStdout } =
+    const { waitForText, waitForFinish, getExitCode, writeText, getStderr } =
       await spawn("node", "./dist/cli/index.js release");
 
     expect(await exists("BasicContract.sol")).toEqual(true);
@@ -26,7 +26,7 @@ describe("npx web3sdkio release", () => {
     // wait for program to finish
     await waitForFinish();
 
-    expect(getStdout().at(-1)).toContain(
+    expect(getStderr().at(-1)).toContain(
       "https://web3sdk.io/contracts/release/",
     );
 

@@ -1,5 +1,6 @@
 import {
   ChainId,
+  getAllDetectedFeatureNames,
   isFeatureEnabled,
   resolveContractUriFromAddress,
   Web3sdkioSDK,
@@ -9,10 +10,11 @@ import { AddressZero } from "@ethersproject/constants";
 import { SignerWithAddress } from "@nomiclabs/hardhat-ethers/signers";
 import {
   DropERC721__factory,
+  DropERC721_V3__factory,
   TokenERC721__factory,
 } from "@web3sdkio/contracts-js";
 import { Web3sdkioStorage } from "@web3sdkio/storage";
-import { expect } from "chai";
+import { assert, expect } from "chai";
 import { ethers } from "ethers";
 import { readFileSync } from "fs";
 import invariant from "tiny-invariant";
@@ -91,6 +93,17 @@ describe("Publishing", async () => {
     );
     expect(isFeatureEnabled(DropERC721__factory.abi, "ERC721Mintable")).to.eq(
       false,
+    );
+  });
+
+  it("should extract all features", async () => {
+    const tokenFeatures = getAllDetectedFeatureNames(TokenERC721__factory.abi);
+    expect(tokenFeatures).to.contain("ERC721Enumerable");
+    expect(getAllDetectedFeatureNames(DropERC721__factory.abi)).to.contain(
+      "ERC721ClaimPhasesV2",
+    );
+    expect(getAllDetectedFeatureNames(DropERC721_V3__factory.abi)).to.contain(
+      "ERC721ClaimPhasesV1",
     );
   });
 
@@ -452,6 +465,30 @@ describe("Publishing", async () => {
     expect(nftsAfter[0].supply).to.equal(1);
     expect(nftsAfter[1].metadata.name).to.equal("cool nft 2");
     expect(nftsAfter[1].supply).to.equal(0);
+  });
+
+  it("ERC1155Signature mint feature detection", async () => {
+    const ipfsUri = "ipfs://QmNuKYGZoiHyumKjT7gPk3vwy3WKt7gTf1hKGZ2eyGZGRd";
+    const addr = await sdk.deployer.deployContractFromUri(ipfsUri, [
+      "test",
+      "test",
+    ]);
+    const c = await sdk.getContract(addr);
+    const payload = {
+      metadata: {
+        name: "SigMinted Edition",
+      },
+      to: samWallet.address, // Who will receive the NFT (or AddressZero for anyone)
+      price: 0.5, // the price to pay for minting
+      royaltyBps: 100, // custom royalty fees for this NFT (in bps)
+      quantity: "1",
+    };
+
+    const goodPayload = await c.erc1155.signature.generate(payload);
+    const valid = await c.erc1155.signature.verify(goodPayload);
+    expect(valid).to.eq(true);
+    const tx = await c.erc1155.signature.mint(goodPayload);
+    expect(tx.id.toNumber()).to.eq(0);
   });
 
   it("Constructor params with tuples", async () => {

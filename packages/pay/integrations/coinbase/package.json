@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-pay-integrations-coinbase.cjs.js",
+  "module": "dist/web3sdkio-pay-integrations-coinbase.esm.js"
+}

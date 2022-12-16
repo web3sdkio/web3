@@ -1,0 +1,53 @@
+{
+  "name": "@web3sdkio/pay",
+  "version": "0.1.0",
+  "main": "dist/web3sdkio-pay.cjs.js",
+  "module": "dist/web3sdkio-pay.esm.js",
+  "exports": {
+    ".": {
+      "module": "./dist/web3sdkio-pay.esm.js",
+      "default": "./dist/web3sdkio-pay.cjs.js"
+    },
+    "./integrations/coinbase": {
+      "module": "./integrations/coinbase/dist/web3sdkio-pay-integrations-coinbase.esm.js",
+      "default": "./integrations/coinbase/dist/web3sdkio-pay-integrations-coinbase.cjs.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": "https://github.com/web3sdkio/web3/tree/main/packages/pay",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/web3sdkio/web3/issues"
+  },
+  "author": "web3sdkio eng <eng@web3sdk.io>",
+  "files": [
+    "dist/",
+    "integrations/"
+  ],
+  "preconstruct": {
+    "entrypoints": [
+      "index.ts",
+      "integrations/**"
+    ],
+    "___experimentalFlags_WILL_CHANGE_IN_PATCH": {
+      "exports": true
+    },
+    "exports": true
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "@coinbase/cbpay-js": "^1.6.0"
+  },
+  "devDependencies": {
+    "@preconstruct/cli": "^2.2.1",
+    "typescript": "^4.7.4"
+  },
+  "scripts": {
+    "format": "prettier --write 'src/**/*'",
+    "lint": "eslint src/",
+    "fix": "eslint src/ --fix",
+    "clean": "rm -rf dist/",
+    "build": "tsc && preconstruct build",
+    "push": "yalc push"
+  }
+}

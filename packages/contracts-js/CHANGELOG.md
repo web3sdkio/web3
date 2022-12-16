@@ -1,5 +1,11 @@
 # @web3sdkio/contracts-js
 
+## 1.2.2
+
+### Patch Changes
+
+- [#438](https://github.com/web3sdkio/web3/pull/438) [`f451da6`](https://github.com/web3sdkio/web3/commit/f451da6395689a5f89800ee63f34b6175b61f703) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Fix SigMint detection for OSRF NFT Collection contracts
+
 ## 1.2.1
 
 ### Patch Changes

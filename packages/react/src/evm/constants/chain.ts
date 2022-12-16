@@ -2,7 +2,7 @@ import { NATIVE_TOKENS, SUPPORTED_CHAIN_ID } from "@web3sdkio/sdk";
 import { ChainId } from "@web3sdkio/sdk";
 import type { Chain as WagmiChain } from "wagmi";
 
-export type Chain = WagmiChain & { deprecated?: boolean };
+export type Chain = WagmiChain;
 const chain: Record<string, Chain> = {
   mainnet: {
     id: ChainId.Mainnet,

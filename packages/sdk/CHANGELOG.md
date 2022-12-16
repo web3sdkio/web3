@@ -1,5 +1,88 @@
 # @web3sdkio/sdk
 
+## 3.6.7
+
+### Patch Changes
+
+- [#451](https://github.com/web3sdkio/web3/pull/451) [`3731459`](https://github.com/web3sdkio/web3/commit/3731459d33f1ded7ebb69124809449b901b3ad3d) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Less strict prebuilt checks to support OSRF variants
+
+- [#450](https://github.com/web3sdkio/web3/pull/450) [`cac6c30`](https://github.com/web3sdkio/web3/commit/cac6c30bca5e17df81d746ef81316af47d5e252e) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Fix setting allowance or approvals gaslessly
+
+- [#448](https://github.com/web3sdkio/web3/pull/448) [`7a37e56`](https://github.com/web3sdkio/web3/commit/7a37e564fd5d5a9df84c8da44ecaf6c42f67a0e2) Thanks [@jnsdls](https://github.com/jnsdls)! - [EVM] - allow `useContract` to fail faster to enable the import case
+
+## 3.6.6
+
+### Patch Changes
+
+- [#443](https://github.com/web3sdkio/web3/pull/443) [`8c6cdaa`](https://github.com/web3sdkio/web3/commit/8c6cdaa2887fb2cc40d3ee6991233d195d103805) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Fix signature minting from OpenSea Royalty Filter NFT collection contracts
+
+## 3.6.5
+
+### Patch Changes
+
+- [#440](https://github.com/web3sdkio/web3/pull/440) [`efc56fa`](https://github.com/web3sdkio/web3/commit/efc56fa5802490ac8ef50037658d046afd89e9a1) Thanks [@jnsdls](https://github.com/jnsdls)! - [EVM] - providers are now re-used if the constructor options are identical leading to better batching, also introduced an additional max batch size param (250 by default)
+
+## 3.6.4
+
+### Patch Changes
+
+- [#438](https://github.com/web3sdkio/web3/pull/438) [`f451da6`](https://github.com/web3sdkio/web3/commit/f451da6395689a5f89800ee63f34b6175b61f703) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Fix SigMint detection for OSRF NFT Collection contracts
+
+- [#416](https://github.com/web3sdkio/web3/pull/416) [`af3acc6`](https://github.com/web3sdkio/web3/commit/af3acc6b10751b840e56aef6400da5eea6040df2) Thanks [@adam-maj](https://github.com/adam-maj)! - Add support for AWS KMS
+
+- [#424](https://github.com/web3sdkio/web3/pull/424) [`1bfb91d`](https://github.com/web3sdkio/web3/commit/1bfb91dbf3a39160c987a425813ac5dbb84703ad) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Improve error parsing for other wallets
+
+- [#436](https://github.com/web3sdkio/web3/pull/436) [`ee47840`](https://github.com/web3sdkio/web3/commit/ee478407673b0416e0c1cfe2be11bd6963395348) Thanks [@jnsdls](https://github.com/jnsdls)! - fix #429
+
+- [#434](https://github.com/web3sdkio/web3/pull/434) [`def4251`](https://github.com/web3sdkio/web3/commit/def42511ff5a20d83f9094164dafb87e412571b5) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - [SOL] Remove workaround to fetch NFT owners
+
+- [#429](https://github.com/web3sdkio/web3/pull/429) [`034a257`](https://github.com/web3sdkio/web3/commit/034a257442314c67729f7bafcbe3740cff33fa32) Thanks [@jakeloo](https://github.com/jakeloo)! - Extract more minimal proxy impl address
+
+- [#418](https://github.com/web3sdkio/web3/pull/418) [`eca4776`](https://github.com/web3sdkio/web3/commit/eca47763cd89cc3b7aa57b542971837987540b55) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Increase gas limit for opening packs
+
+- [#420](https://github.com/web3sdkio/web3/pull/420) [`639e535`](https://github.com/web3sdkio/web3/commit/639e535ed55280ad9d081001aab3f5af72bb3e45) Thanks [@jnsdls](https://github.com/jnsdls)! - update deps
+
+- Updated dependencies [[`f451da6`](https://github.com/web3sdkio/web3/commit/f451da6395689a5f89800ee63f34b6175b61f703)]:
+  - @web3sdkio/contracts-js@1.2.2
+
+## 3.6.3
+
+### Patch Changes
+
+- [#408](https://github.com/web3sdkio/web3/pull/408) [`48797c7`](https://github.com/web3sdkio/web3/commit/48797c7cf0695965e33eb6bf602be4652f7085a8) Thanks [@jnsdls](https://github.com/jnsdls)! - [EVM] - add `Gasless` as a possible extension to feature-detect
+
+- [#402](https://github.com/web3sdkio/web3/pull/402) [`83dcaf7`](https://github.com/web3sdkio/web3/commit/83dcaf70584af8c5cdf0427f9fc1ba82d89f0887) Thanks [@adam-maj](https://github.com/adam-maj)! - Expose sdk.fromWallet and wallet classes
+
+- [#412](https://github.com/web3sdkio/web3/pull/412) [`f03be39`](https://github.com/web3sdkio/web3/commit/f03be398e0d7b75c9c5b4fb643f35903e89a17e7) Thanks [@easonchai](https://github.com/easonchai)! - Correctly handle contracts using the SignatureMintERC1155 ContractKit extension
+
+- [#283](https://github.com/web3sdkio/web3/pull/283) [`2eaa67a`](https://github.com/web3sdkio/web3/commit/2eaa67acbe21464e7715d0b696afdc024460a44d) Thanks [@adam-maj](https://github.com/adam-maj)! - AppURI detection now enabled
+
+- [#414](https://github.com/web3sdkio/web3/pull/414) [`47f8945`](https://github.com/web3sdkio/web3/commit/47f8945325447874b1ace0359919c1d54fd55436) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Improve error parsing
+
+## 3.6.2
+
+### Patch Changes
+
+- [#405](https://github.com/web3sdkio/web3/pull/405) [`ccb7db4`](https://github.com/web3sdkio/web3/commit/ccb7db48739b8dddcb2c032b3b6e3e5200485715) Thanks [@nachoiacovino](https://github.com/nachoiacovino)! - Add updateAll param to creators and royalty update hooks for Solana
+
+- [#404](https://github.com/web3sdkio/web3/pull/404) [`9151aa7`](https://github.com/web3sdkio/web3/commit/9151aa7dc80754a7aa4fd3f6ce0207bccbb6451f) Thanks [@jnsdls](https://github.com/jnsdls)! - [EVM] - expose `getDefaultTrustedForwarders` helper function
+
+- [#305](https://github.com/web3sdkio/web3/pull/305) [`5a01c53`](https://github.com/web3sdkio/web3/commit/5a01c537e30bd7ef562aad1012413990de6faedf) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - Update to Metaplex 0.17
+
+## 3.6.1
+
+### Patch Changes
+
+- [#398](https://github.com/web3sdkio/web3/pull/398) [`15514f1`](https://github.com/web3sdkio/web3/commit/15514f190a844d809ae5b1edb580aab46a682485) Thanks [@jnsdls](https://github.com/jnsdls)! - [EVM] - add `defaultValue` to constructorParams schema for releases
+
+- [#388](https://github.com/web3sdkio/web3/pull/388) [`7c0744a`](https://github.com/web3sdkio/web3/commit/7c0744a006e78987ad8b271b2c64f4bac7759510) Thanks [@adam-maj](https://github.com/adam-maj)! - Add support for total supply and pagination on get all
+
+- [#395](https://github.com/web3sdkio/web3/pull/395) [`f8bceec`](https://github.com/web3sdkio/web3/commit/f8bceec10c60b30dc3d6f45926e2a9e018202578) Thanks [@jnsdls](https://github.com/jnsdls)! - [Solana] - fix claim condition reset to native token from custom
+
+- [#399](https://github.com/web3sdkio/web3/pull/399) [`887af24`](https://github.com/web3sdkio/web3/commit/887af24450e316c2ea390cd49c0563cebe793c0f) Thanks [@jnsdls](https://github.com/jnsdls)! - [EVM] - fix custom error handling for null-ish error values
+
+- [#390](https://github.com/web3sdkio/web3/pull/390) [`96bd92e`](https://github.com/web3sdkio/web3/commit/96bd92e724ec7d880d23348071b26ab8c21dd868) Thanks [@joaquim-verges](https://github.com/joaquim-verges)! - [SDK] Expose `getAllDetectedFeatures(ABI)` helper function
+
 ## 3.6.0
 
 ### Minor Changes

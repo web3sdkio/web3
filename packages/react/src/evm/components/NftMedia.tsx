@@ -15,7 +15,7 @@ export interface Web3sdkioNftMediaProps extends SharedMediaProps {
 /**
  * This component can be used to render NFTs from the web3sdkio SDK.
  * Props: {@link Web3sdkioNftMediaProps}
- * 
+ *
  * @example
  * ```jsx
  * import { Web3sdkioNftMedia, useContract, useNFT } from "@web3sdkio/react";

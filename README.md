@@ -28,7 +28,6 @@
 | [/storage](./packages/storage) | Best in class decentralized storage SDK for Browser and Node         | <a href="https://www.npmjs.com/package/@web3sdkio/storage"><img src="https://img.shields.io/npm/v/@web3sdkio/storage?color=red&label=npm&logo=npm" alt="npm version"/></a> |
 | [/cli](./packages/cli)         | Publish and deploy smart contracts without dealing with private keys | <a href="https://www.npmjs.com/package/web3sdkio"><img src="https://img.shields.io/npm/v/web3sdkio?color=red&label=npm&logo=npm" alt="npm version"/></a>                           |
 
-
 ## Documentation
 
 Visit [https://docs.web3sdk.io/](https://docs.web3sdk.io/) to view the full documentation.

@@ -5,6 +5,14 @@
       "outputs": ["dist/**"],
       "dependsOn": ["^build"]
     },
+    "@web3sdkio/wallets#build": {
+      "outputs": ["dist/**", "wallets/**", "connectors/**"],
+      "dependsOn": ["^build"]
+    },
+    "@web3sdkio/pay#build": {
+      "outputs": ["dist/**", "integrations/**"],
+      "dependsOn": ["^build"]
+    },
     "@web3sdkio/sdk#build": {
       "outputs": ["dist/**", "evm/**", "solana/**"],
       "dependsOn": ["^build"]

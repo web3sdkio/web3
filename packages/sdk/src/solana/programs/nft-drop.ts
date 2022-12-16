@@ -1,4 +1,8 @@
 import {
+  QueryAllParams,
+  QueryAllParamsSchema,
+} from "../../core/schema/QueryParams";
+import {
   CommonNFTInput,
   NFT,
   NFTMetadata,
@@ -16,7 +20,7 @@ import { CreatorInput, CreatorOutput } from "../types/programs";
 import { sendMultipartTransaction } from "../utils/transactions";
 import { getNework } from "../utils/urls";
 import {
-  CandyMachineItem,
+  CandyMachineV2Item,
   Metaplex,
   toBigNumber,
 } from "@metaplex-foundation/js";
@@ -99,8 +103,7 @@ export class NFTDrop {
     invariant(info.collectionMintAddress, "Collection mint address not found");
     const metadata = await this.metaplex
       .nfts()
-      .findByMint({ mintAddress: info.collectionMintAddress })
-      .run();
+      .findByMint({ mintAddress: info.collectionMintAddress });
 
     return (await this.nft.toNFTMetadata(metadata)).metadata;
   }
@@ -166,22 +169,37 @@ export class NFTDrop {
    * console.log(nfts[0].metadata.name);
    * ```
    */
-  async getAll(): Promise<NFT[]> {
-    // TODO: Add pagination to get NFT functions
+  async getAll(queryParams?: QueryAllParams): Promise<NFT[]> {
+    const parsedQueryParams = QueryAllParamsSchema.parse(queryParams);
     const info = await this.getCandyMachine();
-    const claimed = await this.getAllClaimed();
-    return await Promise.all(
-      info.items.map(async (item) => {
-        // Check if the NFT has been claimed
-        // TODO: This only checks name/uri which is potentially not unique
-        const claimedNFT = claimed.find(
+
+    // First, get all the claimed NFTs within the query params range
+    const claimedNfts = await this.getAllClaimed(parsedQueryParams);
+    const totalClaimed = await this.totalClaimedSupply();
+
+    // Then filter out all claimed NFTs from items to leave only unclaimed remaining
+    const unclaimedItems: CandyMachineV2Item[] = [];
+    info.items.forEach((item) => {
+      const isClaimed =
+        claimedNfts.filter(
           (nft) =>
             nft.metadata.name === item.name && nft.metadata.uri === item.uri,
-        );
-        if (claimedNFT) {
-          return claimedNFT;
-        }
-        // not claimed yet, return a unclaimed NFT with just the metadata
+        ).length > 0;
+
+      if (!isClaimed) {
+        unclaimedItems.push(item);
+      }
+    });
+
+    // Only fill the remaining count left over after claimed NFTs with unclaimed NFTs
+    const startIndex = Math.max(0, parsedQueryParams.start - totalClaimed);
+    const endIndex = Math.max(
+      0,
+      startIndex + parsedQueryParams.count - claimedNfts.length,
+    );
+
+    const unclaimedNfts = await Promise.all(
+      unclaimedItems.slice(startIndex, endIndex).map(async (item) => {
         const metadata: NFTMetadata = await this.storage.downloadJSON(item.uri);
         return {
           metadata: {
@@ -195,6 +213,9 @@ export class NFTDrop {
         } as NFT;
       }),
     );
+
+    // Always return claimed NFTs first, and then fill remaining query count with unclaimed NFTs
+    return [...claimedNfts, ...unclaimedNfts];
   }
 
   /**
@@ -208,11 +229,14 @@ export class NFTDrop {
    * console.log(nfts[0].name)
    * ```
    */
-  async getAllClaimed(): Promise<NFT[]> {
+  async getAllClaimed(queryParams?: QueryAllParams): Promise<NFT[]> {
     // using getAll from collection here because candy machin findAllMinted doesn't return anything
     const candy = await this.getCandyMachine();
     invariant(candy.collectionMintAddress, "Collection mint address not found");
-    return await this.nft.getAll(candy.collectionMintAddress.toBase58());
+    return await this.nft.getAll(
+      candy.collectionMintAddress.toBase58(),
+      queryParams,
+    );
   }
 
   /**
@@ -266,6 +290,21 @@ export class NFTDrop {
    */
   async ownerOf(nftAddress: string): Promise<string | undefined> {
     return this.nft.ownerOf(nftAddress);
+  }
+
+  /**
+   * Get the total minted supply of this drop
+   * @returns the total supply
+   *
+   * @example
+   * ```jsx
+   * // Get the total number of NFTs that have been minted on this drop
+   * const supply = await program.totalSupply();
+   * ```
+   */
+  async totalSupply(): Promise<number> {
+    const info = await this.getCandyMachine();
+    return info.itemsLoaded.toNumber();
   }
 
   /**
@@ -361,20 +400,20 @@ export class NFTDrop {
       CommonNFTInput.parse(metadata),
     );
     const uris = await this.storage.uploadBatch(parsedMetadatas, options);
-    const items: CandyMachineItem[] = uris.map((uri, i) => ({
+    const items: CandyMachineV2Item[] = uris.map((uri, i) => ({
       name: parsedMetadatas[i].name?.toString() || "",
       uri,
     }));
 
     // turn items into batches of $LAZY_MINT_BATCH_SIZE
-    const batches: CandyMachineItem[][] = [];
+    const batches: CandyMachineV2Item[][] = [];
     while (items.length) {
       batches.push(items.splice(0, LAZY_MINT_BATCH_SIZE));
     }
 
     const builders = batches.map((batch, i) =>
       this.metaplex
-        .candyMachines()
+        .candyMachinesV2()
         .builders()
         .insertItems({
           candyMachine,
@@ -425,7 +464,7 @@ export class NFTDrop {
     const builders = await Promise.all(
       [...Array(amount).keys()].map(async () => {
         return await this.metaplex
-          .candyMachines()
+          .candyMachinesV2()
           .builders()
           .mint({
             candyMachine,
@@ -458,13 +497,10 @@ export class NFTDrop {
     const collection = candyMachine.collectionMintAddress
       ? candyMachine.collectionMintAddress
       : undefined;
-    const tx = await this.metaplex
-      .nfts()
-      .delete({
-        mintAddress: new PublicKey(nftAddress),
-        collection,
-      })
-      .run();
+    const tx = await this.metaplex.nfts().delete({
+      mintAddress: new PublicKey(nftAddress),
+      collection,
+    });
     return {
       signature: tx.response.signature,
     };
@@ -475,13 +511,11 @@ export class NFTDrop {
    * @param creators - the creators to update
    */
   async updateCreators(creators: CreatorInput[]) {
-    const tx = await this.metaplex
-      .candyMachines()
-      .update({
-        candyMachine: await this.getCandyMachine(),
-        creators: enforceCreator(creators, this.metaplex.identity().publicKey),
-      })
-      .run();
+    const tx = await this.metaplex.candyMachinesV2().update({
+      candyMachine: await this.getCandyMachine(),
+      creators: enforceCreator(creators, this.metaplex.identity().publicKey),
+    });
+
     return {
       signature: tx.response.signature,
     };
@@ -492,13 +526,11 @@ export class NFTDrop {
    * @param sellerFeeBasisPoints - the royalty basis points of the collection
    */
   async updateRoyalty(sellerFeeBasisPoints: number) {
-    const tx = await this.metaplex
-      .candyMachines()
-      .update({
-        candyMachine: await this.getCandyMachine(),
-        sellerFeeBasisPoints,
-      })
-      .run();
+    const tx = await this.metaplex.candyMachinesV2().update({
+      candyMachine: await this.getCandyMachine(),
+      sellerFeeBasisPoints,
+    });
+
     return {
       signature: tx.response.signature,
     };
@@ -506,8 +538,7 @@ export class NFTDrop {
 
   private async getCandyMachine() {
     return this.metaplex
-      .candyMachines()
-      .findByAddress({ address: this.publicKey })
-      .run();
+      .candyMachinesV2()
+      .findByAddress({ address: this.publicKey });
   }
 }

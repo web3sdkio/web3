@@ -40,11 +40,11 @@ export function Web3sdkioNextAuth(cfg: Web3sdkioNextAuthConfig) {
               path: "/",
               httpOnly: true,
               secure: true,
-              sameSite: "strict",
+              sameSite: "none",
             }),
           );
 
-          return { address };
+          return { id: address, address };
         } catch (err) {
           return null;
         }

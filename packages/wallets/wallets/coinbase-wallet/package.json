@@ -1,0 +1,4 @@
+{
+  "main": "dist/web3sdkio-wallets-wallets-coinbase-wallet.cjs.js",
+  "module": "dist/web3sdkio-wallets-wallets-coinbase-wallet.esm.js"
+}
