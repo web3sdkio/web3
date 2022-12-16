@@ -1,6 +1,6 @@
 {
   "name": "@web3sdkio/react",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "repository": "https://github.com/web3sdkio/web3/tree/main/packages/react",
   "author": "web3sdkio eng <eng@web3sdk.io>",
   "license": "Apache-2.0",

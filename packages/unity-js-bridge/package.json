@@ -1,6 +1,6 @@
 {
   "name": "@web3sdkio/unity-js-bridge",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "dist/web3sdkio-unity-bridge.js",
   "repository": "https://github.com/web3sdkio/web3/tree/main/packages/unity-js-bridge",
   "license": "Apache-2.0",
